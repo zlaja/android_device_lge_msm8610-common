@@ -375,6 +375,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #NFCEE_ACCESS_PATH := device/lge/w/prebuilt/etc/nfcee_access.xml
 
+# Keyhandler
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
+
 # QC time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
@@ -463,3 +467,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.rat_on=legacy \
     camera2.portability.force_api=1 \
     ro.lge.proximity.delay=25
+
+# CmUpdater
+PRODUCT_PROPERTY_OVERRIDES += \
+cm.updater.uri=http://vasy.ru/CyanogenModOTA/api
