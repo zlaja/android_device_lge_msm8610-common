@@ -472,8 +472,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 =======
     ro.lge.proximity.delay=25 \
     ro.telephony.ril_class=LgeRIL
-
-# CmUpdater
-PRODUCT_PROPERTY_OVERRIDES += \
-cm.updater.uri=http://vasy.ru/CyanogenModOTA/api
->>>>>>> 6b19ebb9c9b2055107a23337af350bf3c5f5a52c
