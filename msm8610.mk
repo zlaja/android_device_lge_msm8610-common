@@ -241,12 +241,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=1 \
-    debug.sf.hw=1 \
-    debug.composition.type=dyn \
     persist.hwc.mdpcomp.enable=true \
-    debug.mdpcomp.logs=0 \
-    debug.enabletr=0
+    debug.sf.fb_always_on=1 \
+    debug.composition.type=gpu \
+    debug.gralloc.map_fb_memory=0 \
+    debug.hwc.dynThreshold=1.5 \
+    dalvik.vm.heapsize=36m \
+    dev.pm.dyn_samplingrate=1
 
 # QCOM Display
 PRODUCT_PACKAGES += \
@@ -427,9 +428,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     persist.lg.data.autoprof.msim=true \
     persist.cne.feature=1 \
-    debug.sf.fb_always_on=1 \
-    persist.hwc.mdpcomp.enable=true \
-    dev.pm.dyn_samplingrate=1 \
     mmp.enable.3g2=true \
     media.aac_51_output_enabled=true \
     mm.enable.smoothstreaming=true \
@@ -469,4 +467,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.sbp.update=0 \
     persist.radio.rat_on=legacy \
     camera2.portability.force_api=1 \
+<<<<<<< HEAD
     ro.lge.proximity.delay=25
+=======
+    ro.lge.proximity.delay=25 \
+    ro.telephony.ril_class=LgeRIL
+
+# CmUpdater
+PRODUCT_PROPERTY_OVERRIDES += \
+cm.updater.uri=http://vasy.ru/CyanogenModOTA/api
+>>>>>>> 6b19ebb9c9b2055107a23337af350bf3c5f5a52c
