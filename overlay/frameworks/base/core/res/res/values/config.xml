@@ -50,25 +50,12 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">false</bool>
 
-    <!--Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
-	blank if the device do not support performance profiles -->
-    <string name="config_perf_profile_prop" translatable="false">sys.perf.profile</string>
-
-    <!--When config_perf_profile_prop is defined, this value MUST be the index of
-	one of the listes values in frameworks/base/core/res/res/values/cm_arrays.xml
-	for "perf_profile_values" array. Leave it blank if the device do not support
-	performance profiles -->
-    <string name="config_perf_profile_default_entry" translatable="false">1</string>
-
     <!-- Traffic stats -->
     <string name="config_datause_iface">rmnet0</string>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
     on the headphone/microphone jack. When false use the older uevent framework -->
     <bool name="config_useDevInputEventForAudioJack">false</bool>
-
-    <!-- Is the device capable of hot swapping an ICC Card -->
-    <bool name="config_hotswapCapable">true</bool>
 
     <!-- Enable the option to check proximity sensor when deciding whether to
          turn the screen on
@@ -81,10 +68,13 @@
     <integer name="config_multiuserMaximumUsers">4</integer>
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
+    
+    <!-- Is the device capable of hot swapping an ICC Card -->
+    <bool name="config_hotswapCapable">true</bool>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">15</integer>
+    <integer name="config_screenBrightnessSettingMinimum">5</integer>
 
     <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
@@ -97,7 +87,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">15</integer>
+    <integer name="config_screenBrightnessDim">10</integer>
 
     <!-- Indicate the device's Smart Cover coordinates.
          If none are provided, then the feature will be disabled.
@@ -115,13 +105,4 @@
         <item>1036</item>
     </integer-array>
     -->
-
- <!-- The list absolute paths of jar/apk files containing the device specific handlers,
-delimited by File.pathSeparator, which defaults to ":" on Android -->
-<string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.keyhandler.jar</string>
-
- <!-- Full qualified name of the class that implements
-com.android.internal.os.DeviceKeyHandler interface. -->
-
-<string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.settings.device.KeyHandler</string>
 </resources>
