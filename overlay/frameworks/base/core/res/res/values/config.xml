@@ -50,16 +50,6 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">false</bool>
 
-    <!--Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
-	blank if the device do not support performance profiles -->
-    <string name="config_perf_profile_prop" translatable="false">sys.perf.profile</string>
-
-    <!--When config_perf_profile_prop is defined, this value MUST be the index of
-	one of the listes values in frameworks/base/core/res/res/values/cm_arrays.xml
-	for "perf_profile_values" array. Leave it blank if the device do not support
-	performance profiles -->
-    <string name="config_perf_profile_default_entry" translatable="false">1</string>
-
     <!-- Traffic stats -->
     <string name="config_datause_iface">rmnet0</string>
 
@@ -76,6 +66,9 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">400</integer>
     -->
+
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
@@ -99,29 +92,15 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">15</integer>
 
-    <!-- Indicate the device's Smart Cover coordinates.
-         If none are provided, then the feature will be disabled.
-         The array should contain 4 values, in pixels, (sample values provided):
-         Top      0
-         Left     100
-         Bottom   Top + 400
-         Right    Display Width - 100
+    <!-- Control the behavior when the user long presses the home button.
+            0 - Nothing
+            1 - Recent apps view in SystemUI
+            2 - Launch assist intent
+         This needs to match the constants in
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <!-- disabled until smart cover can be tested
-    <integer-array name="config_smartCoverWindowCoords">
-        <item>0</item>
-        <item>44</item>
-        <item>774</item>
-        <item>1036</item>
-    </integer-array>
-    -->
+    <integer name="config_longPressOnHomeBehavior">1</integer>
 
- <!-- The list absolute paths of jar/apk files containing the device specific handlers,
-delimited by File.pathSeparator, which defaults to ":" on Android -->
-<string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.keyhandler.jar</string>
-
- <!-- Full qualified name of the class that implements
-com.android.internal.os.DeviceKeyHandler interface. -->
-
-<string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.settings.device.KeyHandler</string>
+    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 </resources>

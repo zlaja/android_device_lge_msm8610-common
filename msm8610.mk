@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2015 AOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -372,10 +372,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #NFCEE_ACCESS_PATH := device/lge/w/prebuilt/etc/nfcee_access.xml
 
-# Keyhandler
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.keyhandler
-
 # QC time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
@@ -463,6 +459,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lge.proximity.delay=25 \
     ro.telephony.ril_class=LgeRIL
 
-# CmUpdater
-PRODUCT_PROPERTY_OVERRIDES += \
-cm.updater.uri=http://vasy.ru/CyanogenModOTA/api
