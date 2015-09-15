@@ -464,6 +464,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
     ro.telephony.ril_class=LgeRIL
 
-# CmUpdater
-PRODUCT_PROPERTY_OVERRIDES += \
-cm.updater.uri=http://vasy.ru/CyanogenModOTA/api
