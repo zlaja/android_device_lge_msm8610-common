@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 AOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -90,9 +90,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Use qcom power hal
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_USES_CPU_BOOST_HINT := true
-
-# Hardware tunables framework
-BOARD_HARDWARE_CLASS := device/lge/msm8610-common/cmhw/
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/msm8610-common/bluetooth
